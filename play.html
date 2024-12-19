@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../static/img/logo/favicon.png">
+    <title>Cadibal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/nav.css">
+    <link rel="stylesheet" href="../static/css/play.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+       
+    
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom mt-4 mx-auto" style="max-width: 1200px;">
+        <div class="container-fluid container-custom">
+            <a class="navbar-brand fw-bold" href="#">Cadibal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="../static/img/logo/logo.png" alt="logo" width="50px">
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link p-0 active" href="cc.html">C Creation</a></li>
+                    <li class="nav-item"><a class="nav-link p-0" href="job.html">Job</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link p-0 dropdown-toggle" href="post_public.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Public</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="post_upload.html">Upload Post</a></li>
+                            <li><a class="dropdown-item" href="post_global.html">Global Search</a></li>
+                            <li><a class="dropdown-item" href="post_public.html">Friends Post</a></li>
+                            <li><a class="dropdown-item" href="post_upload.html">Trending</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link p-0" target="_blank" href="https://www.cadibal.org/">Self Learning</a></li>
+                    <li class="nav-item"><a class="nav-link p-0" target="_blank" href="https://cadibal.com/">Problem</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="Notification.html">Notification</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link p-0" href="search.html">Search</a></li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link p-0 dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../static/img/1.jpg" alt="profile" class="rounded-circle" style="width: 40px; height: 40px;">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="user_profile.html">View Profile</a></li>
+                            <li><a class="dropdown-item" href="edit_profile.html">Edit Profile</a></li>
+                            <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Video Section -->
+    <section class="video-container">
+        <video id="videoPlayer" controls
+        controlsList="nodownload noremoteplayback">
+            <source src="../static/uploads/1.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+        <div class="video-details mt-4">
+            <div class="d-flex justify-content-between align-items-center">
+                <!-- Channel Info -->
+                <div class="channel-info d-flex align-items-center">
+                    <img src="../static/img/1.jpg" alt="Channel Profile" class="rounded-circle" style="width: 50px; height: 50px;">
+                    <div class="ms-3">
+                        <h6 class="mb-0">Nagarjun</h6>
+                    </div>
+                </div>
+        
+                <!-- Like and Dislike Buttons -->
+                <div class="like-dislike">
+                    <button id="likeButton" class="btn btn-like" aria-label="Like this video">
+                        <i class="bi bi-hand-thumbs-up"></i> <span id="likeCount">0</span>
+                    </button>
+                    <button id="dislikeButton" class="btn btn-dislike" aria-label="Dislike this video">
+                        <i class="bi bi-hand-thumbs-down"></i> <span id="dislikeCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Channel Description Section -->
+        <div class="channel-description mt-3">
+            <div class="card" style="max-width: 1200px; margin: auto;">
+                <div class="card-body">
+                    <h5 class="card-title">Channel Description</h5>
+                    <p class="card-text text-muted">
+                        This is the description of the channel. It provides more information about the content creator. You can include details about the type of content, goals, or any relevant information to engage viewers.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let likeCount = 0;
+        let dislikeCount = 0;
+        let likeDisabled = false;
+        let dislikeDisabled = false;
+
+        // Handle Like button click
+        document.getElementById("likeButton").addEventListener("click", function() {
+            if (!likeDisabled) {
+                likeDisabled = true;
+                likeCount++;
+                document.getElementById("likeCount").textContent = likeCount;
+                setTimeout(() => likeDisabled = false, 500); // Prevent spam clicking
+            }
+        });
+
+        // Handle Dislike button click
+        document.getElementById("dislikeButton").addEventListener("click", function() {
+            if (!dislikeDisabled) {
+                dislikeDisabled = true;
+                dislikeCount++;
+                document.getElementById("dislikeCount").textContent = dislikeCount;
+                setTimeout(() => dislikeDisabled = false, 500);
+            }
+        });
+    </script>
+</body>
+</html>

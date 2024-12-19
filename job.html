@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../static/img/logo/favicon.png">
+  <title>Job</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/nav.css">
+  <link rel="stylesheet" href="../static/css/job.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom mt-4 mx-auto" style="max-width: 1200px;">
+        <div class="container-fluid container-custom">
+            <!-- Brand -->
+            <a class="navbar-brand fw-bold" href="#">Cadibal</a>
+
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="../static/img/logo/logo.png" alt="logo" width="50px">
+                
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="cc.html">C Creation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0 active" href="job.html">Job</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link p-0 dropdown-toggle" href="post_public.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Public
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="post_upload.html">Upload Post</a></li>
+                            <li><a class="dropdown-item" href="post_global.html">Global Search</a></li>
+                            <li><a class="dropdown-item" href="post_public.html">Friends Post</a></li>
+                            <li><a class="dropdown-item" href="post_trending.html">Trending</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" target="_blank" href="https://www.cadibal.org/">Self Learning</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" target="_blank" href="https://cadibal.com/">Problem</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link p-0" href="Notification.html">Notification</a>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-0" href="search.html">Search</a>
+                    </li>
+                </ul>
+
+                <!-- Profile Dropdown -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link p-0 dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="../static/img/1.jpg" alt="profile" class="rounded-circle" style="width: 40px; height: 40px;">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="user_profile.html">View Profile</a></li>
+                            <li><a class="dropdown-item" href="edit_profile.html">Edit Profile</a></li>
+                            <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container my-5">
+  <div class="row g-4">
+    <!-- Sidebar Filters -->
+    <div class="col-lg-3">
+      <div class="sidebar">
+        <h5 class="filter-title">Filter Jobs</h5>
+        <div class="mb-3">
+          <label for="roleFilter" class="form-label">Role</label>
+          <input type="text" id="roleFilter" class="form-control" placeholder="e.g., UI/UX Designer">
+        </div>
+        <div class="mb-3">
+          <label for="locationFilter" class="form-label">Location</label>
+          <input type="text" id="locationFilter" class="form-control" placeholder="e.g., Chennai">
+        </div>
+        <div class="mb-3">
+          <label for="skillFilter" class="form-label">Skill</label>
+          <input type="text" id="skillFilter" class="form-control" placeholder="e.g., HTML, Figma">
+        </div>
+        <button class="btn btn-apply" id="filterBtn">Apply Filters</button>
+      </div>
+    </div>
+
+    <!-- Job Cards Section -->
+    <div class="col-lg-9" id="jobCardsSection">
+        <!-- Job Cards -->
+        <!-- Example Job Card -->
+        <div class="job-card d-flex align-items-center mb-4" data-role="UI/UX Designer" data-location="Chennai, Thoraipakkam" data-skill="Figma, HTML" data-description="Design beautiful user interfaces and experiences. Work with clients to understand their needs and deliver creative solutions." data-qualifications="Bachelor's degree in Design, 2+ years of experience in UI/UX design. Proficient in Figma, Adobe XD, and design principles.">
+            <img src="../static/img/2.png" alt="Company Logo" class="company-logo">
+            <div class="flex-grow-1">
+              <h5 class="job-title">UI/UX Designer</h5>
+              <p class="company-name">K-Creative Tech</p>
+              <p class="mb-0">
+                <i class="bi bi-geo-alt-fill text-danger me-2"></i>Chennai, Thoraipakkam
+                <i class="bi bi-briefcase text-warning ms-3 me-2"></i>2+ Years Experience
+              </p>
+            </div>
+            <div class="text-end">
+              <p class="text-primary mb-2">Package: 3-4 LPA</p>
+              <a href="#" class="btn apply-btn">Click</a>
+            </div>
+        </div>
+
+        <div class="job-card d-flex align-items-center mb-4" data-role="UI/UX Designer" data-location="Chennai, Thoraipakkam" data-skill="Figma, HTML" data-description="Design beautiful user interfaces and experiences. Work with clients to understand their needs and deliver creative solutions." data-qualifications="Bachelor's degree in Design, 2+ years of experience in UI/UX design. Proficient in Figma, Adobe XD, and design principles.">
+            <img src="../static/img/2.png" alt="Company Logo" class="company-logo">
+            <div class="flex-grow-1">
+              <h5 class="job-title">UI/UX Designer</h5>
+              <p class="company-name">K-Creative Tech</p>
+              <p class="mb-0">
+                <i class="bi bi-geo-alt-fill text-danger me-2"></i>erode
+                <i class="bi bi-briefcase text-warning ms-3 me-2"></i>2+ Years Experience
+              </p>
+            </div>
+            <div class="text-end">
+              <p class="text-primary mb-2">Package: 3-4 LPA</p>
+              <a href="#" class="btn apply-btn">Click</a>
+            </div>
+        </div>
+    
+        <!-- More job cards can go here -->
+    </div>
+    
+  </div>
+</div>
+
+<!-- Modal for Job Details -->
+<div class="modal fade" id="jobDetailsModal" tabindex="-1" aria-labelledby="jobDetailsModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="jobDetailsModalLabel">Job Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5 class="job-title">UI/UX Designer</h5>
+        <p><strong>Company:</strong> K-Creative Tech</p>
+        <p><strong>Location:</strong> Chennai, Thoraipakkam</p>
+        <p><strong>Role:</strong> UI/UX Designer</p>
+        <p><strong>Skills:</strong> Figma, HTML</p>
+        <p><strong>Description:</strong> Design beautiful user interfaces and experiences. Work with clients to understand their needs and deliver creative solutions.</p>
+        <p><strong>Qualifications:</strong> Bachelor's degree in Design, 2+ years of experience in UI/UX design. Proficient in Figma, Adobe XD, and design principles.</p>
+        <p><strong>Experience:</strong> 2+ Years</p>
+        <p><strong>Salary:</strong> 3-4 LPA</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Apply Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Job card click to show modal
+    document.querySelectorAll('.job-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const role = card.getAttribute('data-role');
+        const location = card.getAttribute('data-location');
+        const skills = card.getAttribute('data-skill');
+        const description = card.getAttribute('data-description');
+        const qualifications = card.getAttribute('data-qualifications');
+  
+        document.querySelector('#jobDetailsModal .modal-title').innerText = role;
+        document.querySelector('#jobDetailsModal .modal-body').innerHTML = `
+          <p><strong>Location:</strong> ${location}</p>
+          <p><strong>Skills:</strong> ${skills}</p>
+          <p><strong>Description:</strong> ${description}</p>
+          <p><strong>Qualifications:</strong> ${qualifications}</p>
+        `;
+        const modal = new bootstrap.Modal(document.getElementById('jobDetailsModal'));
+        modal.show();
+      });
+    });
+  </script>
+  
+
+</body>
+</html>
